@@ -1,0 +1,126 @@
+/* General Page Styling */
+body{
+  color:#eee;
+  font-family: 'Raleway', cursive;
+  background: url('http://previewstaging.com/tmp/manhattan-bridge-dumbo-view_1024x681.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #0d0626;
+  margin:0;
+  padding:0;
+  text-shadow: 1px 1px 2px black;
+}
+a{
+  color:#ddd;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+  color:#FC0;
+}
+
+img.headshot{
+  width:100%;
+  max-width: 200px;
+}
+
+/* Nav Styling */
+#top-nav{
+    position: fixed;
+    top:0;
+    width:100%;
+    height:30px;
+    color:#aaa;
+    background-color: #000;
+    border-top: 3px solid #800080;
+}
+
+#nav-header{
+  position: absolute;
+  font-size: .75em;
+  padding-left: 1em;
+  margin-top: .7em;
+}
+#nav-links-right{
+    float: right;
+    padding-right: .5em;
+}
+#nav-links-left{
+    text-align: left;
+    font-size: .75em;
+    margin-top: 0.7em;
+    padding-left: 12em;
+    float: left;
+    padding-right: .5em;
+}
+#nav-links-right img{
+  width:22px;
+  padding-top:.25em;
+  padding-right: .25em;
+}
+
+/* Wrappers and Containers Styling */
+
+#main-wrapper{
+  margin:auto;
+  text-align: center;
+  width:100%;
+  margin-top: 40px;
+
+}
+.header-image{
+  float:left;
+  text-align: center;
+  width:25%;
+}
+.header-copy{
+  margin-top: 10px;
+  padding-left: 25px;
+  text-align: left;
+  float: left;
+  width: 65%;
+  max-width: 500px;
+}
+
+
+/* Animations */
+
+/* keyframes for start/end state */
+/* @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } } */
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;  /* hide at start */
+  -webkit-animation:fadeIn ease-in 1;  /* call the "fadeIn" keyframe defined above, animate with ease-in effect, execute 1 time only */
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;  /* at end of animation stop at last keyframe value (opacity: 1) to keep visible*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+.fade-in {
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+
+
+
+/* Media Queries */
+@media (max-width: 500px) {
+  .header-image{
+    margin: auto;
+    width:100%;
+  }
+  .header-copy{
+    min-width: 90%;
+  }
+}
